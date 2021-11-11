@@ -1,0 +1,30 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:pigdog101/springcloud-config.git
+          search-paths:
+            - springcloud-config
+          username: pigdog101
+          password: mzw.1996
+      label: master
+
+
+eureka:
+  instance:
+    instance-id: cloud3344
+    #显示访问路径ip
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+    #表示自己将注册进eureka
+    register-with-eureka: true
+    #从server抓取已有的注册信息
+    fetch-registry: true

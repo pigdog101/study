@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="com.mzw.mybatisplus.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+        <option name="javaModelPackage" value="com.mzw.mybatisplus.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="mybatis-plus" />
+        <option name="lombokBuilderAnnotation" value="true" />
+        <option name="lombokDataAnnotation" value="true" />
+        <option name="mapperAnnotaion" value="true" />
+        <option name="modelAddToString" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="common">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.mzw.cloudproviderpayment8001.dao" />
+                  <option name="javaMapperPath" value="D:\study\cloud-provider-payment8001\src\main\java" />
+                  <option name="javaModelPacakge" value="com.mzw.cloudproviderpayment8001.entity" />
+                  <option name="javaModelPath" value="D:\study\cloud-provider-payment8001\src\main\java" />
+                  <option name="javaServiceInterfacePackage" value="com.mzw.cloudproviderpayment8001.service" />
+                  <option name="javaServiceInterfacePath" value="D:\study\cloud-provider-payment8001\src\main\java" />
+                  <option name="javaServicePackage" value="com.mzw.cloudproviderpayment8001.service.impl" />
+                  <option name="javaServicePath" value="D:\study\cloud-provider-payment8001\src\main\java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="D:\study\cloud-provider-payment8001\src\main\resources\mapper" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="mybatis-plus">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.mzw.mybatisplus.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+                  <option name="javaModelPacakge" value="com.mzw.mybatisplus.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.mzw.mybatisplus.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+                  <option name="javaServicePackage" value="com.mzw.mybatisplus.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/mybatis-plus/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/mybatis-plus/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="garbage:garbage_area">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Area" />
+                  <option name="moduleName" value="mybatis-plus" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="garbage:garbage_audit">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Audit" />
+                  <option name="moduleName" value="mybatis-plus" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="garbage:garbage_car">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="GarbageCar" />
+                  <option name="moduleName" value="common" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="userMybatisPlus" value="true" />
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/mybatis-plus/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,45 @@
+package com.mzw.netty.nio.netty.codec2;
+
+import com.mzw.netty.nio.netty.codec.studentPOJO;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.CharsetUtil;
+
+import java.util.Random;
+
+/**
+ * @PACKAGE_NAME: com.mzw.netty.nio.netty.simple
+ * @AUTHOR: mzw
+ * @DATE: 2021/4/2
+ */
+public class NettyClientHandle extends ChannelInboundHandlerAdapter {
+    //通道就绪时触发
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+//        System.out.println(ctx);
+        DataInfo.MyMessage message = null;
+        Integer rand = new Random().nextInt(3);
+        if (rand == 0) {
+            message = DataInfo.MyMessage.newBuilder().setDataType(DataInfo.MyMessage.DataType.StudentType)
+                    .setStudent(DataInfo.Student.newBuilder().setId(1).setName("mzw").build()).build();
+        }else {
+            message = DataInfo.MyMessage.newBuilder().setDataType(DataInfo.MyMessage.DataType.WorkerType)
+                    .setWorker(DataInfo.Worker.newBuilder().setId(2).setName("zzz").build()).build();
+        }
+        ctx.writeAndFlush(message);
+    }
+    //当通道读取事件时
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf byteBuf = (ByteBuf)msg;
+        System.out.println(byteBuf.toString(CharsetUtil.UTF_8));
+        System.out.println(ctx.channel().remoteAddress());
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
+    }
+}

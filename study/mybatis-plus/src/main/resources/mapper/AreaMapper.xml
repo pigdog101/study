@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mzw.mybatisplus.mapper.AreaMapper">
+  <resultMap id="BaseResultMap" type="com.mzw.mybatisplus.entity.Area">
+    <!--@mbg.generated-->
+    <!--@Table garbage_area-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="lat" jdbcType="DECIMAL" property="lat" />
+    <result column="lon" jdbcType="DECIMAL" property="lon" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="ranking" jdbcType="INTEGER" property="ranking" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+    <result column="map_type" jdbcType="INTEGER" property="mapType" />
+    <result column="update_score" jdbcType="DECIMAL" property="updateScore" />
+    <result column="test" jdbcType="VARCHAR" property="test" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, lat, lon, gmt_create, gmt_modified, `status`, `type`, ranking, score, 
+    map_type, update_score, test
+  </sql>
+</mapper>

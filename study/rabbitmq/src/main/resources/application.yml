@@ -1,0 +1,56 @@
+#rabbitMQ
+
+spring:
+  rabbitmq:
+    host: 192.168.2.128
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      retry:
+        enable: true
+        max-attampts: 3
+  datasource:
+    #    type: com.zaxxer.hikari.HikariDataSource
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.0.24:1521:zktx
+    username: dpm_hz
+    password: dpm_hz
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+  #      connection-test-query: SELECT 1
+
+
+mq:
+  config:
+    fanout:
+      exchange: order.fanout
+    topic:
+      exchange: log.topic
+    direct:
+      exchange: log.direct
+  queue:
+    fanout:
+      sms: order.sms
+      push: order.push
+    topic:
+      info: log.topic.queue.info
+      error: log.topic.queue.error
+      log: log.all
+    direct:
+      info: log.direct.queue.info
+      error: log.direct.queue.error
+  routing-key:
+    direct:
+      info: log.direct.routing-key.info
+      error: log.direct.routing-key.error
+
+

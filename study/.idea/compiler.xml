@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloudalibaba-config-nacos-client3377" />
+        <module name="cloud-provider-payment8002" />
+        <module name="cloud-provider-payment8004" />
+        <module name="cloud-eureka-server7001" />
+        <module name="mycommon" />
+        <module name="cloud-provider-payment8001" />
+        <module name="cloud-eureka-server7002" />
+        <module name="cloud-gateway-9527" />
+        <module name="cloudalibaba-consumer-order83" />
+        <module name="rabbitmq" />
+        <module name="cloud-consumerconsul-order80" />
+        <module name="cloud-consumerzk-order80" />
+        <module name="cloudalibaba-provider-payment9002" />
+        <module name="cloudalibaba-provider-payment9001" />
+        <module name="common" />
+        <module name="jedis" />
+        <module name="cloud-consumer-order80" />
+        <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-config-3344" />
+        <module name="cloud-provider-payment8006" />
+        <module name="mybatis-plus" />
+        <module name="cloud-consumer-feign-order80" />
+        <module name="netty" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="cloud-zkconsumer-order80" target="1.8" />
+      <module name="springcloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-config-3344" options="-parameters" />
+      <module name="cloud-consumer-feign-order80" options="-parameters" />
+      <module name="cloud-consumer-order80" options="-parameters" />
+      <module name="cloud-consumerconsul-order80" options="-parameters" />
+      <module name="cloud-consumerzk-order80" options="-parameters" />
+      <module name="cloud-eureka-server7001" options="-parameters" />
+      <module name="cloud-eureka-server7002" options="-parameters" />
+      <module name="cloud-gateway-9527" options="-parameters" />
+      <module name="cloud-provider-hystrix-payment8001" options="-parameters" />
+      <module name="cloud-provider-payment8001" options="-parameters" />
+      <module name="cloud-provider-payment8002" options="-parameters" />
+      <module name="cloud-provider-payment8004" options="-parameters" />
+      <module name="cloud-provider-payment8006" options="-parameters" />
+      <module name="cloud-zkconsumer-order80" options="-parameters" />
+      <module name="cloudalibaba-config-nacos-client3377" options="-parameters" />
+      <module name="cloudalibaba-consumer-order83" options="-parameters" />
+      <module name="cloudalibaba-provider-payment9001" options="-parameters" />
+      <module name="cloudalibaba-provider-payment9002" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="jedis" options="-parameters" />
+      <module name="mybatis-plus" options="-parameters" />
+      <module name="mycommon" options="-parameters" />
+      <module name="netty" options="-parameters" />
+      <module name="rabbitmq" options="-parameters" />
+      <module name="springcloud" options="-parameters" />
+    </option>
+  </component>
+</project>

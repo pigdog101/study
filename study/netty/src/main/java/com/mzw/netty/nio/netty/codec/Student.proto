@@ -1,0 +1,7 @@
+syntax = "proto3";//版本
+option java_outer_classname = "studentPOJO";//外部类名，同时也是文件名
+//protobuf是以message管理数据
+message Student{ //会在 studentPOJO外部类生成一个内部类 他是真正的pojo对像
+    int32 id = 1;//Student的属性id 序号为1 不是值
+    string name = 2;
+}

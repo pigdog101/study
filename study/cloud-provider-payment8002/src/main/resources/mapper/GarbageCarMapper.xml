@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mzw.providerpayment8002.dao.GarbageCarMapper">
+  <resultMap id="BaseResultMap" type="com.mzw.mycommon.entity.GarbageCar">
+    <!--@mbg.generated-->
+    <!--@Table garbage_car-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="car_number" jdbcType="VARCHAR" property="carNumber" />
+    <result column="car_type_name" jdbcType="VARCHAR" property="carTypeName" />
+    <result column="car_type_id" jdbcType="INTEGER" property="carTypeId" />
+    <result column="principle" jdbcType="VARCHAR" property="principle" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="organization_id" jdbcType="INTEGER" property="organizationId" />
+    <result column="organization_name" jdbcType="VARCHAR" property="organizationName" />
+    <result column="insurance_company" jdbcType="VARCHAR" property="insuranceCompany" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="qx_id" jdbcType="INTEGER" property="qxId" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="frame_number" jdbcType="VARCHAR" property="frameNumber" />
+    <result column="engine_number" jdbcType="VARCHAR" property="engineNumber" />
+    <result column="driving_license" jdbcType="VARCHAR" property="drivingLicense" />
+    <result column="load_capacity" jdbcType="VARCHAR" property="loadCapacity" />
+    <result column="power_type" jdbcType="VARCHAR" property="powerType" />
+    <result column="garbage_type" jdbcType="VARCHAR" property="garbageType" />
+    <result column="driver" jdbcType="VARCHAR" property="driver" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="driver_license" jdbcType="VARCHAR" property="driverLicense" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, car_number, car_type_name, car_type_id, principle, phone, organization_id, organization_name, 
+    insurance_company, gmt_modified, gmt_create, `status`, qx_id, `source`, frame_number, 
+    engine_number, driving_license, load_capacity, power_type, garbage_type, driver, 
+    id_card, driver_license
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from garbage_car
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from garbage_car
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.mzw.mycommon.entity.GarbageCar" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into garbage_car (car_number, car_type_name, car_type_id, 
+      principle, phone, organization_id, 
+      organization_name, insurance_company, gmt_modified, 
+      gmt_create, `status`, qx_id, 
+      `source`, frame_number, engine_number, 
+      driving_license, load_capacity, power_type, 
+      garbage_type, driver, id_card, 
+      driver_license)
+    values (#{carNumber,jdbcType=VARCHAR}, #{carTypeName,jdbcType=VARCHAR}, #{carTypeId,jdbcType=INTEGER}, 
+      #{principle,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{organizationId,jdbcType=INTEGER}, 
+      #{organizationName,jdbcType=VARCHAR}, #{insuranceCompany,jdbcType=VARCHAR}, #{gmtModified,jdbcType=TIMESTAMP}, 
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{qxId,jdbcType=INTEGER}, 
+      #{source,jdbcType=VARCHAR}, #{frameNumber,jdbcType=VARCHAR}, #{engineNumber,jdbcType=VARCHAR}, 
+      #{drivingLicense,jdbcType=VARCHAR}, #{loadCapacity,jdbcType=VARCHAR}, #{powerType,jdbcType=VARCHAR}, 
+      #{garbageType,jdbcType=VARCHAR}, #{driver,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, 
+      #{driverLicense,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.mzw.mycommon.entity.GarbageCar" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into garbage_car
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="carNumber != null">
+        car_number,
+      </if>
+      <if test="carTypeName != null">
+        car_type_name,
+      </if>
+      <if test="carTypeId != null">
+        car_type_id,
+      </if>
+      <if test="principle != null">
+        principle,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="organizationId != null">
+        organization_id,
+      </if>
+      <if test="organizationName != null">
+        organization_name,
+      </if>
+      <if test="insuranceCompany != null">
+        insurance_company,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="qxId != null">
+        qx_id,
+      </if>
+      <if test="source != null">
+        `source`,
+      </if>
+      <if test="frameNumber != null">
+        frame_number,
+      </if>
+      <if test="engineNumber != null">
+        engine_number,
+      </if>
+      <if test="drivingLicense != null">
+        driving_license,
+      </if>
+      <if test="loadCapacity != null">
+        load_capacity,
+      </if>
+      <if test="powerType != null">
+        power_type,
+      </if>
+      <if test="garbageType != null">
+        garbage_type,
+      </if>
+      <if test="driver != null">
+        driver,
+      </if>
+      <if test="idCard != null">
+        id_card,
+      </if>
+      <if test="driverLicense != null">
+        driver_license,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="carNumber != null">
+        #{carNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeName != null">
+        #{carTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeId != null">
+        #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="principle != null">
+        #{principle,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationId != null">
+        #{organizationId,jdbcType=INTEGER},
+      </if>
+      <if test="organizationName != null">
+        #{organizationName,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceCompany != null">
+        #{insuranceCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="qxId != null">
+        #{qxId,jdbcType=INTEGER},
+      </if>
+      <if test="source != null">
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNumber != null">
+        #{frameNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="engineNumber != null">
+        #{engineNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicense != null">
+        #{drivingLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="loadCapacity != null">
+        #{loadCapacity,jdbcType=VARCHAR},
+      </if>
+      <if test="powerType != null">
+        #{powerType,jdbcType=VARCHAR},
+      </if>
+      <if test="garbageType != null">
+        #{garbageType,jdbcType=VARCHAR},
+      </if>
+      <if test="driver != null">
+        #{driver,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicense != null">
+        #{driverLicense,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mzw.mycommon.entity.GarbageCar">
+    <!--@mbg.generated-->
+    update garbage_car
+    <set>
+      <if test="carNumber != null">
+        car_number = #{carNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeName != null">
+        car_type_name = #{carTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="carTypeId != null">
+        car_type_id = #{carTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="principle != null">
+        principle = #{principle,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationId != null">
+        organization_id = #{organizationId,jdbcType=INTEGER},
+      </if>
+      <if test="organizationName != null">
+        organization_name = #{organizationName,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceCompany != null">
+        insurance_company = #{insuranceCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="qxId != null">
+        qx_id = #{qxId,jdbcType=INTEGER},
+      </if>
+      <if test="source != null">
+        `source` = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="frameNumber != null">
+        frame_number = #{frameNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="engineNumber != null">
+        engine_number = #{engineNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="drivingLicense != null">
+        driving_license = #{drivingLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="loadCapacity != null">
+        load_capacity = #{loadCapacity,jdbcType=VARCHAR},
+      </if>
+      <if test="powerType != null">
+        power_type = #{powerType,jdbcType=VARCHAR},
+      </if>
+      <if test="garbageType != null">
+        garbage_type = #{garbageType,jdbcType=VARCHAR},
+      </if>
+      <if test="driver != null">
+        driver = #{driver,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="driverLicense != null">
+        driver_license = #{driverLicense,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mzw.mycommon.entity.GarbageCar">
+    <!--@mbg.generated-->
+    update garbage_car
+    set car_number = #{carNumber,jdbcType=VARCHAR},
+      car_type_name = #{carTypeName,jdbcType=VARCHAR},
+      car_type_id = #{carTypeId,jdbcType=INTEGER},
+      principle = #{principle,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      organization_id = #{organizationId,jdbcType=INTEGER},
+      organization_name = #{organizationName,jdbcType=VARCHAR},
+      insurance_company = #{insuranceCompany,jdbcType=VARCHAR},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      `status` = #{status,jdbcType=INTEGER},
+      qx_id = #{qxId,jdbcType=INTEGER},
+      `source` = #{source,jdbcType=VARCHAR},
+      frame_number = #{frameNumber,jdbcType=VARCHAR},
+      engine_number = #{engineNumber,jdbcType=VARCHAR},
+      driving_license = #{drivingLicense,jdbcType=VARCHAR},
+      load_capacity = #{loadCapacity,jdbcType=VARCHAR},
+      power_type = #{powerType,jdbcType=VARCHAR},
+      garbage_type = #{garbageType,jdbcType=VARCHAR},
+      driver = #{driver,jdbcType=VARCHAR},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      driver_license = #{driverLicense,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
